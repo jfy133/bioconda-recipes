@@ -18,6 +18,7 @@ requirements:
   run:
     - openjdk >=11
     - python
+    - libfontconfig1
 
 test:
   commands:
