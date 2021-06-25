@@ -13,16 +13,13 @@ source:
 build:
   noarch: generic
   number: 1
-  
-channels:
-    - conda-forge
-    - bioconda
-    - defaults
 
 requirements:
   run:
     - openjdk
     - python
+    - fontconfig
+    - font-ttf-dejavu-sans-mono
 
 test:
   commands:
