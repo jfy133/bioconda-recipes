@@ -12,7 +12,12 @@ source:
 
 build:
   noarch: generic
-  number: 0
+  number: 1
+  
+channels:
+    - conda-forge
+    - bioconda
+    - defaults
 
 requirements:
   run:
