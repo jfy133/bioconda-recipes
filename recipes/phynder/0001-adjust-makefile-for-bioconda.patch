@@ -1,0 +1,33 @@
+From a10190d12d8a96798d0e64bfe275030a7f5797ac Mon Sep 17 00:00:00 2001
+From: Lightning Auriga <lightning.auriga@gmail.com>
+Date: Sat, 16 Sep 2023 20:32:26 -0400
+Subject: [PATCH] adjust makefile for bioconda
+
+---
+ Makefile | 12 +++---------
+ 1 file changed, 3 insertions(+), 9 deletions(-)
+
+diff --git a/Makefile b/Makefile
+index b554aa0..b8f3748 100644
+--- a/Makefile
++++ b/Makefile
+@@ -1,13 +1,7 @@
+-# makefile for phynder, developed on Richard's Mac.
++# makefile for phynder, adjusted for bioconda
+ 
+-#CFLAGS= -O3
+-CFLAGS= -g				# for debugging
+-HTSDIR=../htslib
+-CPPFLAGS=-I$(HTSDIR)
+-
+-HTSLIB=$(HTSDIR)/libhts.a
+-include $(HTSDIR)/htslib_static.mk
+-LDLIBS=$(HTSLIB) -lpthread $(HTSLIB_static_LIBS)
++CFLAGS ?= -O3
++LDLIBS ?= -lhts -lm -lpthread
+ 
+ all: phynder
+ 
+-- 
+2.41.0
+
