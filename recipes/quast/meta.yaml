@@ -49,6 +49,7 @@ requirements:
     - minimap2 >=2.10
     - bedtools
     - bwa
+    - gridss
 
 test:
   source_files:
